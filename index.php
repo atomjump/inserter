@@ -75,7 +75,8 @@
 		 $options = array('always_send_email' => true,
 				 'notification' => true);
 		 $api->new_message($your_name, $shouted, $whisper_to, $email, $ip, $forum_info['forum_id'], $options);
-
+	
+		 echo "Message has been queued successfully.";
 		 $api->complete_parallel_calls();
 	} else {
 		echo "Sorry, that does not have the correct code. No message has been added.";
