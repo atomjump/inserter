@@ -48,7 +48,7 @@
 	if((isset($_REQUEST['code'])) && ($_REQUEST['code'] == $insert_config['passcode'])) {
 	
 		if(isset($_REQUEST['msg'])) {
-			$message = strval($_REQUEST['msg']);
+			$message = strval(strip_tags($_REQUEST['msg']));
 		} else {
 			$message = "";
 		}
