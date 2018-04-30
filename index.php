@@ -49,7 +49,9 @@
 	
 		if(isset($_REQUEST['msg'])) {
 			$message = strval($_REQUEST['msg']);
-			$message = str_ireplace(".jpg", "", $message);
+			if(isset($_REQUEST['hideImages'])) {
+				$message = str_ireplace(".jpg", "", $message);
+			}
 		} else {
 			$message = "";
 		}
