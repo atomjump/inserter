@@ -48,8 +48,8 @@
 	if((isset($_REQUEST['code'])) && ($_REQUEST['code'] == $insert_config['passcode'])) {
 	
 		if(isset($_REQUEST['msg'])) {
-			$message = trim(strval(strip_tags($_REQUEST['msg'])));
-			$message = str_replace(":", "-", $message);
+			$message = strval($_REQUEST['msg']));
+			$message = str_ireplace(".jpg", "", $message);
 		} else {
 			$message = "";
 		}
