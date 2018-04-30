@@ -49,6 +49,7 @@
 	
 		if(isset($_REQUEST['msg'])) {
 			$message = trim(strval(strip_tags($_REQUEST['msg'])));
+			$message = str_replace(":", "-", $message);
 		} else {
 			$message = "";
 		}
