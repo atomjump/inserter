@@ -9,7 +9,15 @@
 	
 	
 	*/
-
+	
+	function trim_trailing_slash_local($str) {
+        return rtrim($str, "/");
+    }
+    
+    function add_trailing_slash_local($str) {
+        //Remove and then add
+        return rtrim($str, "/") . '/';
+    }
 
 	if(!isset($insert_config)) {
         //Get global plugin config - but only once
@@ -32,7 +40,7 @@
 
 
 
- 	$start_path = $insert_config['serverPath'];
+ 	$start_path = add_trailing_slash_local($insert_config['serverPath']);
 
 	$staging = $insert_config['staging'];	
 	
