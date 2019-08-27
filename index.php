@@ -25,12 +25,16 @@
         if($data) {
             $insert_config = json_decode($data, true);
             if(!isset($insert_config)) {
-                echo "Error: insert config/config.json is not valid JSON.";
+                $response = array("success" => false,
+		 					"msg" => "Error: insert config/config.json is not valid JSON.");
+				echo json_encode($response);
                 exit(0);
             }
      
         } else {
-            echo "Error: Missing config/config.json in insert plugin.";
+        	$response = array("success" => false,
+		 					"msg" => "Error: Missing config/config.json in insert plugin.");
+			echo json_encode($response);
             exit(0);
      
         }
@@ -87,10 +91,14 @@
 				 'notification' => true);
 		 $api->new_message($your_name, $shouted, $whisper_to, $email, $ip, $forum_info['forum_id'], $options);
 	
-		 echo "Message has been queued successfully.";
+		 $response = array("success" => true,
+		 					"msg" => "Message has been queued successfully.");
+		 echo json_encode($response);
 		 $api->complete_parallel_calls();
 	} else {
-		echo "Sorry, that does not have the correct code. No message has been added.";
+		$response = array("success" => false,
+		 					"msg" => "Sorry, that does not have the correct code. No message has been added.");
+		echo json_encode($response);
 	
 	}
 	
