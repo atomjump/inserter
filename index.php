@@ -9,6 +9,8 @@
 	
 	
 	*/
+
+	header('Content-type:application/json;charset=utf-8');
 	
 	function trim_trailing_slash_local($str) {
         return rtrim($str, "/");
