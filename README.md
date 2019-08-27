@@ -30,3 +30,5 @@ You can then make an external API call to e.g.
 ```
 https://yourdomain.com/loop-server/plugins/inserter/index.php?forum=[Forum Name]&msg=[Message URL-encoded]&code=2498jfknf-changeme
 ```
+
+The response is a JSON array and includes "success" (true / false), and "msg" with the corresponding human message.
