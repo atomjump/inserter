@@ -3,6 +3,6 @@
 	"name": "Sender Name",
 	"email": "email@test.com",
 	"defaultForum": "aj_unique_forum_name",
-	"passcode": "2498jfknf-changeme"
+	"passcode": "2498jfknf-changeme",
 	"staging": true
 }
