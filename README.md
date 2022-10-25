@@ -6,14 +6,14 @@ A basic message inserter for AtomJump Messaging with a simple passcode for secur
  
 ## Requirements
 
-AtomJump Loop Server >= 1.0.4
+AtomJump Messaging Server >= 1.0.4
 
 
 ## Installation
 
 Find the server at https://src.atomjump.com/atomjump/loop-server. Download and install.
 
-Download the .zip file or git clone the repository into the directory loop-server/plugins/inserter
+Download the .zip file or git clone the repository into the directory messaging-server/plugins/inserter
 
 Copy config/configORIGINAL.json to config/config.json
 
