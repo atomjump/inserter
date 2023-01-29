@@ -1,5 +1,7 @@
 <img src="https://atomjump.com/images/logo80.png">
 
+__WARNING: this project has now moved to https://src.atomjump.com/atomjump/inserter.git__
+
 # inserter
 A basic message inserter for AtomJump Messaging with a simple passcode for security.
 
